@@ -33,7 +33,6 @@ public class Gestor {
 		}
 	}
 
-	// Corregido: pasamos el nombre y la nueva nota como parámetros
 	public void modificarNota(String nombreAlumno, double nuevaNota) {
 		boolean encontrado = false;
 		for (Alumno a : alumnos) {
@@ -50,7 +49,6 @@ public class Gestor {
 	}
 
 	public void borrarAlumno(String nombreAlumno) {
-		// removeIf devuelve true si encontró y borró algo
 		boolean eliminado = alumnos.removeIf(a -> a.getNombre().equalsIgnoreCase(nombreAlumno));
 
 		if (eliminado) {
